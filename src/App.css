@@ -1,0 +1,49 @@
+/* 基础样式已通过Tailwind CSS提供 */
+/* 这里可以添加自定义样式 */
+
+/* 动画效果 */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(-2deg); }
+  50% { transform: translateY(-10px) rotate(-2deg); }
+  100% { transform: translateY(0px) rotate(-2deg); }
+}
+
+@keyframes floatBottom {
+  0% { transform: translateY(0px) rotate(1deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(1deg); }
+}
+
+/* 响应式调整 */
+@media (max-width: 640px) {
+  .App {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+}
+
+/* 加载动画 */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 彻底去掉按钮的蓝色焦点框线 */
+button,
+button:focus,
+button:focus-visible,
+button:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+
